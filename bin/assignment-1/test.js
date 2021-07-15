@@ -95,13 +95,13 @@
    });
  
    // Register.
-   await register(browser, 'http://localhost:8000/auth/register');
+   await register(browser, 'http://localhost:5000/auth/register');
  
    // Setup the browser session to be logged into our site.
-   await login(browser, 'http://localhost:8000');
+   await login(browser, 'http://localhost:5000');
  
    // The local server is running on port 10632.
-   const url = 'http://localhost:8000/explore';
+   const url = 'http://localhost:5000/explore';
    // Direct Lighthouse to use the same port.
    const result = await lighthouse(url, {port: PORT, disableStorageReset: true});
    // Direct Puppeteer to close the browser as we're done with it.
@@ -156,7 +156,7 @@
    //       then add the test user either through the flask db schema migrate
    //       or by just clicking the buttons in the UI using puppeteer.
    // 
-   console.log("This script assumes that the app is already started and running on port 8000.")
+   console.log("This script assumes that the app is already started and running on port 5000.")
    console.log("");
    console.log("It also assumes that there is a test user with username 'test' and password 'test'.");
    main();
