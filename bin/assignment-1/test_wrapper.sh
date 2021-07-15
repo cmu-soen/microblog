@@ -1,7 +1,5 @@
 #!/bin/sh
 
-trap 'kill $(jobs -p)' EXIT
-
 # Download and install.
 python3 -m venv venv
 source venv/bin/activate
@@ -18,9 +16,13 @@ node bin/assignment-1/test.js
 
 if [ $? -eq 0 ]
 then
+    ps auxwww | grep flask | awk '{print $2}' | xargs kill -9
+
     echo "Success!"
     exit 0
 else
+    ps auxwww | grep flask | awk '{print $2}' | xargs kill -9
+
     echo "Test failed; see the output above."
     exit 1
 fi
