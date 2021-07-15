@@ -10,7 +10,6 @@ dist
 build
 eggs
 parts
-bin
 var
 sdist
 develop-eggs
@@ -38,3 +37,5 @@ nosetests.xml
 venv
 app.db
 microblog.log*
+
+node_modules/

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "lighthouse": "^8.1.0",
+    "puppeteer": "^10.1.0"
+  },
+  "scripts": {
+    "test": "bin/assignment-1/test_wrapper.sh"
+  }
+}
